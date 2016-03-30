@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	"github.com/tobi/airbrake-go"
 	"io/ioutil"
 	"log"
 	"fmt"
@@ -13,9 +12,6 @@ import (
 var port *int = flag.Int("port", 4004, "port")
 var cacheLength *int = flag.Int("secs", 3*60*60, "cache retention in seconds (3 hours)")
 var webkitInstances *int = flag.Int("webkits", 5, "amount of webkits in pool")
-
-var airbrakeEndpoint *string = flag.String("airbrake-endpoint", airbrake.Endpoint, "endpoint for airbrake [optional]")
-var airbrakeApiKey *string = flag.String("airbrake-api-key", "", "api key for airbrake [optional]")
 
 var phantom *Phantom = NewWebkitPool(*webkitInstances)
 
@@ -68,7 +64,7 @@ type Process struct {
 }
 
 func (p *Process) Log() {
-	log.Printf("GET status:%d url:%s size:%s bytes:%d cached:%v cachedScreenshot:%v", p.status, p.screenshotUrl, p.screenshotSize, p.bytesWritten, p.cached, p.cachedScreenshot)
+	log.Printf("GET status:%d url:%s bytes:%d ", p.status, p.screenshotUrl, p.bytesWritten)
 }
 
 func (p *Process) Handle() {
@@ -88,19 +84,13 @@ func (p *Process) Handle() {
 		buffer = png
 	}
 
-	if p.screenshotSize == "" {
-		p.ServePng(buffer)
-		return
-	}
+	p.ServePng(buffer)
+	return
 
 }
 
 func Server(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
-
-	if airbrake.ApiKey {
-		defer airbrake.CapturePanic(r)
-	}
 
 	process := Process{writer: w, request: r}
 
@@ -111,19 +101,12 @@ func Server(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if len(r.Form["size"]) > 0 {
-		process.screenshotSize = r.Form["size"][0]
-	}
-
 	process.Handle()
 	return
 }
 
 func main() {
 	flag.Parse()
-
-	airbrake.Endpoint = *airbrakeEndpoint
-	airbrake.ApiKey = *airbrakeApiKey
 
 	http.HandleFunc("/favicon.ico", http.NotFound)
 	http.HandleFunc("/", Server)
