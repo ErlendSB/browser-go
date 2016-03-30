@@ -6,7 +6,6 @@ import (
 	"log"
 	"fmt"
 	"net/http"
-	"time"
 )
 
 var port *int = flag.Int("port", 4004, "port")
