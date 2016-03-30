@@ -1,0 +1,402 @@
+{
+   "_id":"1",
+   "name":"",
+   "screenshot":"",
+   "created":"2015-09-03T19:44:22.350Z",
+   "scope":{
+      "document":{
+         "contentWidth":"600px",
+         "bodyBgColor":"#ffffff"
+      },
+      "fonts":{
+         "globalFontFamily":"'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif"
+      }
+   },
+   "scopeDescriptors":{
+      "document.contentWidth":{
+         "name":"content width",
+         "type":"object",
+         "inputType":"number-and-unit",
+         "inputTypeProperties":{
+            "units":[
+               {
+                  "name":"Pixels",
+                  "value":"px"
+               },
+               {
+                  "name":"Points",
+                  "value":"pt"
+               },
+               {
+                  "name":"Percent",
+                  "value":"%"
+               }
+            ]
+         },
+         "tooltip":"The default width of all content",
+         "placeholder":"Width",
+         "autocomplete":true,
+         "autofocus":false,
+         "disabled":false,
+         "validationRules":[
+
+         ]
+      },
+      "document.bodyBgColor":{
+         "name":"body background color",
+         "type":"string",
+         "inputType":"color",
+         "inputTypeProperties":{
+            "onlyAllowPresets":false,
+            "presets":[
+               {
+                  "name":"Red",
+                  "value":"#ff0000"
+               },
+               {
+                  "name":"Green",
+                  "value":"#00ff00"
+               },
+               {
+                  "name":"Blue",
+                  "value":"#0000ff"
+               }
+            ]
+         },
+         "tooltip":"The default background color of all content",
+         "placeholder":"Color",
+         "autocomplete":true,
+         "autofocus":false,
+         "disabled":false,
+         "validationRules":[
+
+         ]
+      },
+      "fonts.globalFontFamily":{
+         "name":"document font family",
+         "type":"string",
+         "inputType":"single-select",
+         "inputTypeProperties":{
+            "options":[
+               {
+                  "name":"Georgia",
+                  "value":"Georgia, Times, 'Times New Roman', serif"
+               },
+               {
+                  "name":"Helvetica",
+                  "value":"'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif"
+               }
+            ]
+         },
+         "tooltip":"The fallback font for all text",
+         "placeholder":"Font",
+         "autocomplete":true,
+         "autofocus":false,
+         "disabled":false,
+         "validationRules":[
+
+         ]
+      }
+   },
+   "hiddenScopeProperties":[
+
+   ],
+   "html":"<!DOCTYPE html><html lang=\"en\"><head><style type=\"text/css\">/* Reset */.l-template-body,.l-template-body div,.l-template-body span,.l-template-body applet,.l-template-body object,.l-template-body iframe,.l-template-body h1,.l-template-body h2,.l-template-body h3,.l-template-body h4,.l-template-body h5,.l-template-body h6,.l-template-body p,.l-template-body blockquote,.l-template-body pre,.l-template-body a,.l-template-body abbr,.l-template-body acronym,.l-template-body address,.l-template-body big,.l-template-body cite,.l-template-body code,.l-template-body del,.l-template-body dfn,.l-template-body em,.l-template-body img,.l-template-body ins,.l-template-body kbd,.l-template-body q,.l-template-body s,.l-template-body samp,.l-template-body small,.l-template-body strike,.l-template-body strong,.l-template-body sub,.l-template-body sup,.l-template-body tt,.l-template-body var,.l-template-body b,.l-template-body u,.l-template-body i,.l-template-body center,.l-template-body dl,.l-template-body dt,.l-template-body dd,.l-template-body ol,.l-template-body ul,.l-template-body li,.l-template-body fieldset,.l-template-body form,.l-template-body label,.l-template-body legend,.l-template-body table,.l-template-body caption,.l-template-body tbody,.l-template-body tfoot,.l-template-body thead,.l-template-body tr,.l-template-body th,.l-template-body td,.l-template-body article,.l-template-body aside,.l-template-body canvas,.l-template-body details,.l-template-body embed,.l-template-body figure,.l-template-body figcaption,.l-template-body footer,.l-template-body header,.l-template-body hgroup,.l-template-body menu,.l-template-body nav,.l-template-body output,.l-template-body ruby,.l-template-body section,.l-template-body summary,.l-template-body time,.l-template-body mark,.l-template-body audio,.l-template-body video {margin: 0;padding: 0;border: 0;font-size: 100%;font-weight: normal;font: inherit;vertical-align: baseline;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}/* General */.l-template-body {margin: 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}table {mso-table-lspace: 0pt;mso-table-rspace: 0pt;}img {-ms-interpolation-mode: bicubic;}/* Loopify specific */.l-template-body table {border-spacing: 0;}.l-template-body table td {border-collapse: collapse;}/* Responsiveness --> */@media screen and (max-width: 599px) {table[class=\"l-force-row\"],table[class=\"l-container\"],table[class=\"l-container-nest\"] {width: 100% !important;max-width: 100% !important;}table[class=\"l-force-row-nest\"],table[class=\"l-force-row-nest-2x2\"] {width: 49% !important;max-width: 49% !important;}}@media screen and (max-width: 400px) {table[class=\"l-force-row-nest\"],table[class=\"l-container-nest\"] {width: 100% !important;max-width: 100% !important;padding-left: 0 !important;padding-right:0 !important;}td[class*=\"l-container-padding\"] {padding-left: 10px !important;padding-right: 10px !important;}td[class*=\"l-container-padding-reset\"] {padding-left: 0px !important;padding-right: 0px !important;}}/* <-- Responsiveness *//* Third party overrides */.ios-footer a {color: #aaaaaa !important;text-decoration: underline;}/**/.yshortcuts a {border-bottom: none !important;}/*Yahoo override*/.ExternalClass {width: 100%;}/*Outlook.com override*/.ExternalClass,.ExternalClass p,.ExternalClass span,.ExternalClass font,.ExternalClass td,.ExternalClass div {line-height: 100%;}/*Outlook.com override*/.ReadMsgBody {width: 100%; background-color: #ebebeb;}/*Outlook.com override*/</style><title></title></head><!-- The user sets the email width, usually at 600px. It's wise to limit the range the user can choose: 401px to 900px.The important thing is to change the media query in the style tag \"@media screen and (max-width: 599px) {\" to a different value of pixels depending on the user input.If the user chose 650px, the media query would be \"@media screen and (max-width: 649px) {\", meaning that at 650+px the design is fixed, below that it breaks down into rows. --><body class=\"l-template-body\"><!-- A div is added right after the body tag. For a background image in Outllok we must add v:fill that will fill this div.If we have a background color, we add it here. It's good to have this set as a fallback color when we have an image background as well.--><div class=\"l-template-body\" style=\"background-color: {{document.bodyBgColor}};\"><!--[if gte mso 9]><v:background xmlns:v=\"urn:schemas-microsoft-com:vml\" fill=\"t\"><v:fill type=\"tile\" src=\"{{document.bodyBgImage}}\" color=\"{{document.bodyBgColor}}\"/></v:background><![endif]--><!-- For regular clients, we add the background image in the email wrapper table. The fallback color will be taken from the warpping div. We can't add /*emailBackground*/ background: #f0f0f0; /*emailBackground*/ on this table here because in outlook it will cover the image background. --><!--======== 100% Email Wrapper ========--><table border=\"0\" width=\"100%\" cellpadding=\"0\" cellspacing=\"0\" style=\"font-family: {{fonts.globalFontFamily}};\"><tr><td email-wrapper class=\"l-drop-area\"></td></tr></table><!--======== /100% Email Wrapper ========--></div></body></html>",
+   "modules":[
+      {
+         "_id":"1",
+         "uuid":"module-1",
+         "icon":"/img/email-module-test-icon.svg",
+         "name":"Header and paragraph",
+         "editable":true,
+         "positionLock":"",
+         "scope":{
+            "localVariable":"lorem ipsum",
+            "header":{
+               "text":"Lorem ipsum dolor"
+            },
+            "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare tortor quis diam varius dignissim vel quis justo. Nunc ornare, neque in scelerisque faucibus, enim purus tincidunt mauris, sit amet tincidunt sapien erat vitae nunc."
+         },
+         "sharedScope":{
+            "width":"",
+            "background":"#fff",
+            "header":{
+               "size":"32px",
+               "color":"#000"
+            }
+         },
+         "scopeDescriptors":{
+            "width":{
+               "name":"Module width",
+               "type":"object",
+               "inputType":"number-and-unit",
+               "inputTypeProperties":{
+                  "units":[
+                     {
+                        "name":"Pixels",
+                        "value":"px"
+                     },
+                     {
+                        "name":"Percent",
+                        "value":"%"
+                     }
+                  ]
+               },
+               "tooltip":"The width of this module",
+               "placeholder":"Width",
+               "autocomplete":true,
+               "autofocus":false,
+               "disabled":false,
+               "validationRules":[
+
+               ]
+            },
+            "background":{
+               "name":"Background color",
+               "type":"string",
+               "inputType":"color",
+               "inputTypeProperties":{
+                  "onlyAllowPresets":false,
+                  "presets":[
+
+                  ]
+               },
+               "tooltip":"Background color of this module",
+               "placeholder":"Color",
+               "autocomplete":true,
+               "autofocus":false,
+               "disabled":false,
+               "validationRules":[
+
+               ]
+            },
+            "header.size":{
+               "name":"Size",
+               "type":"object",
+               "inputType":"number-and-unit",
+               "inputTypeProperties":{
+                  "units":[
+                     {
+                        "name":"Pixels",
+                        "value":"px"
+                     },
+                     {
+                        "name":"Points",
+                        "value":"pt"
+                     }
+                  ]
+               },
+               "tooltip":"Font size",
+               "placeholder":"Size",
+               "autocomplete":true,
+               "autofocus":false,
+               "disabled":false,
+               "validationRules":[
+
+               ]
+            },
+            "header.color":{
+               "name":"Color",
+               "type":"string",
+               "inputType":"color",
+               "inputTypeProperties":{
+                  "onlyAllowPresets":false,
+                  "presets":[
+
+                  ]
+               },
+               "tooltip":"Header color",
+               "placeholder":"Color",
+               "autocomplete":true,
+               "autofocus":false,
+               "disabled":false,
+               "validationRules":[
+
+               ]
+            }
+         },
+         "hiddenScopeProperties":[
+            "header.text",
+            "text"
+         ],
+         "html":"<!---------- 100% Row Wrapper , User Width (600px) Row Body Transparent Spacer----------><table email-module border=\"0\" cellpadding=\"0\" cellspacing=\"0\" align=\"center\" class=\"l-container\" style=\"width:100%; max-width:100%;\" title=\"{{localVariable}}\"><tr><td class=\"l-content\" align=\"center\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"l-container l-container-content\" style=\"width: {{width || document.contentWidth}}; max-width: {{width || document.contentWidth}}; background: {{background || document.bodyBgColor}};\"><tr><td style=\"padding: 0 15px;\"><h2 class=\"l-editable\" contenteditable ng-model=\"header.text\" style=\"margin: 15px 0; font-size: {{header.size}}; color: {{header.color}}; text-align: center; text-transform: uppercase;\"></h2></td></tr><tr><td style=\"padding: 0 15px;\"><p class=\"l-editable\" contenteditable ng-model=\"text\" style=\"margin-bottom: 30px; font-size: 16px; font-weight: normal; line-height: 1.2; color: black;\"></p></td></tr></table></td></tr></table><!---------- /100% Row Wrapper , User Width (600px) Row Body Transparent Spacer---------->"
+      }
+   ],
+   "availableModules":[
+      {
+         "_id":"1",
+         "icon":"/img/email-module-test-icon.svg",
+         "name":"Header and paragraph",
+         "editable":true,
+         "positionLock":"",
+         "scope":{
+            "localVariable":"lorem ipsum",
+            "header":{
+               "text":"Lorem ipsum dolor"
+            },
+            "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare tortor quis diam varius dignissim vel quis justo. Nunc ornare, neque in scelerisque faucibus, enim purus tincidunt mauris, sit amet tincidunt sapien erat vitae nunc."
+         },
+         "sharedScope":{
+            "width":"",
+            "background":"#fff",
+            "header":{
+               "size":"32px",
+               "color":"#000"
+            }
+         },
+         "scopeDescriptors":{
+            "width":{
+               "name":"Module width",
+               "type":"object",
+               "inputType":"number-and-unit",
+               "inputTypeProperties":{
+                  "units":[
+                     {
+                        "name":"Pixels",
+                        "value":"px"
+                     },
+                     {
+                        "name":"Percent",
+                        "value":"%"
+                     }
+                  ]
+               },
+               "tooltip":"The width of this module",
+               "placeholder":"Width",
+               "autocomplete":true,
+               "autofocus":false,
+               "disabled":false,
+               "validationRules":[
+
+               ]
+            },
+            "background":{
+               "name":"Background color",
+               "type":"string",
+               "inputType":"color",
+               "inputTypeProperties":{
+                  "onlyAllowPresets":false,
+                  "presets":[
+
+                  ]
+               },
+               "tooltip":"Background color of this module",
+               "placeholder":"Color",
+               "autocomplete":true,
+               "autofocus":false,
+               "disabled":false,
+               "validationRules":[
+
+               ]
+            },
+            "header.size":{
+               "name":"Size",
+               "type":"object",
+               "inputType":"number-and-unit",
+               "inputTypeProperties":{
+                  "units":[
+                     {
+                        "name":"Pixels",
+                        "value":"px"
+                     },
+                     {
+                        "name":"Points",
+                        "value":"pt"
+                     }
+                  ]
+               },
+               "tooltip":"Font size",
+               "placeholder":"Size",
+               "autocomplete":true,
+               "autofocus":false,
+               "disabled":false,
+               "validationRules":[
+
+               ]
+            },
+            "header.color":{
+               "name":"Color",
+               "type":"string",
+               "inputType":"color",
+               "inputTypeProperties":{
+                  "onlyAllowPresets":false,
+                  "presets":[
+
+                  ]
+               },
+               "tooltip":"Header color",
+               "placeholder":"Color",
+               "autocomplete":true,
+               "autofocus":false,
+               "disabled":false,
+               "validationRules":[
+
+               ]
+            }
+         },
+         "hiddenScopeProperties":[
+            "header.text",
+            "text"
+         ],
+         "html":"<!---------- 100% Row Wrapper , User Width (600px) Row Body Transparent Spacer----------><table email-module border=\"0\" cellpadding=\"0\" cellspacing=\"0\" align=\"center\" class=\"l-container\" style=\"width:100%; max-width:100%;\" title=\"{{localVariable}}\"><tr><td class=\"l-content\" align=\"center\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"l-container l-container-content\" style=\"width: {{width || document.contentWidth}}; max-width: {{width || document.contentWidth}}; background: {{background || document.bodyBgColor}};\"><tr><td style=\"padding: 0 15px;\"><h2 class=\"l-editable\" contenteditable ng-model=\"header.text\" style=\"margin: 15px 0; font-size: {{header.size}}; color: {{header.color}}; text-align: center; text-transform: uppercase;\"></h2></td></tr><tr><td style=\"padding: 0 15px;\"><p class=\"l-editable\" contenteditable ng-model=\"text\" style=\"margin-bottom: 30px; font-size: 16px; font-weight: normal; line-height: 1.2; color: black;\"></p></td></tr></table></td></tr></table><!---------- /100% Row Wrapper , User Width (600px) Row Body Transparent Spacer---------->"
+      },
+      {
+         "_id":"2",
+         "icon":"/img/email-module-test-icon.svg",
+         "name":"Ordered List",
+         "editable":true,
+         "positionLock":"",
+         "scope":{
+            "content":"<li>Lorem ipsum</li><li>Dolor sit</li><li>Amet consectetur</li>"
+         },
+         "sharedScope":{
+            "textColor":"#fff",
+            "background":"#29d6a7"
+         },
+         "scopeDescriptors":{
+            "background":{
+               "name":"Background color",
+               "type":"string",
+               "inputType":"color",
+               "inputTypeProperties":{
+                  "onlyAllowPresets":false,
+                  "presets":[
+
+                  ]
+               },
+               "tooltip":"Background color of this module",
+               "placeholder":"Color",
+               "autocomplete":true,
+               "autofocus":false,
+               "disabled":false,
+               "validationRules":[
+
+               ]
+            },
+            "textColor":{
+               "name":"Color",
+               "type":"string",
+               "inputType":"color",
+               "inputTypeProperties":{
+                  "onlyAllowPresets":false,
+                  "presets":[
+
+                  ]
+               },
+               "tooltip":"Text color",
+               "placeholder":"Color",
+               "autocomplete":true,
+               "autofocus":false,
+               "disabled":false,
+               "validationRules":[
+
+               ]
+            }
+         },
+         "hiddenScopeProperties":[
+            "content"
+         ],
+         "html":"<table email-module border=\"0\" cellpadding=\"0\" cellspacing=\"0\" align=\"center\" class=\"l-container\" style=\"width:100%; max-width:100%;\"><tr><td class=\"l-content\" align=\"center\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"l-container l-container-content\" style=\"width: {{document.contentWidth}}; max-width: {{document.contentWidth}}; background: {{background || document.bodyBgColor}};\"><tr><td style=\"padding: 0 15px; text-align: center;\"><ol class=\"l-editable\" contenteditable ng-model=\"content\" style=\"display: inline-block; margin: 15px 0; color: {{textColor}}; text-align: left; font-size: 22px;\"></ol></td></tr></table></td></tr></table>"
+      }
+   ]
+}
