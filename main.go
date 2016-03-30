@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-var port *int = flag.Int("port", 3000, "port")
+var port *int = flag.Int("port", 4004, "port")
 var cacheLength *int = flag.Int("secs", 3*60*60, "cache retention in seconds (3 hours)")
 var webkitInstances *int = flag.Int("webkits", 5, "amount of webkits in pool")
 
@@ -88,7 +88,7 @@ func (p *Process) Handle() {
 
 		png, err := ioutil.ReadFile(cache.filepath)
 
-		// can't read the file? 
+		// can't read the file?
 		if err == nil {
 			p.cached = true
 			p.ServePng(png)
