@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	"github.com/tobi/mogrify-go"
 	"github.com/tobi/airbrake-go"
 	"io/ioutil"
 	"log"
@@ -63,10 +62,6 @@ type Process struct {
 	request *http.Request
 
 	screenshotUrl  string
-	screenshotSize string
-
-	cached           bool
-	cachedScreenshot bool
 	bytesWritten     int
 
 	status int
@@ -79,48 +74,18 @@ func (p *Process) Log() {
 func (p *Process) Handle() {
 	defer p.Log()
 	var buffer []byte
-	var cache *cacheEntry
 
-	// Let's just see if we may have a cache hit
-	// for the exact p.screenshotUrl + p.screenshotSize
-	cache = CacheLookup(p.screenshotUrl + p.screenshotSize)
-	if cache != nil && fresh(cache) {
+	// make the screenshot
+	filename := phantom.Screenshot(p.screenshotUrl)
 
-		png, err := ioutil.ReadFile(cache.filepath)
-
-		// can't read the file?
-		if err == nil {
-			p.cached = true
-			p.ServePng(png)
-			return
-		}
+	if filename == "" {
+		p.ServeError("Error creating screenshot")
+		return
 	}
 
-	// look in the cache for this screenshot
-	cache = CacheLookup(p.screenshotUrl)
-	if cache != nil && fresh(cache) {
-		png, err := ioutil.ReadFile(cache.filepath)
-		if err == nil {
-			p.cachedScreenshot = true
-			buffer = png
-		}
-	}
-
-	if p.cachedScreenshot == false {
-
-		// make the screenshot
-		filename := phantom.Screenshot(p.screenshotUrl)
-
-		if filename == "" {
-			p.ServeError("Error creating screenshot")
-			return
-		}
-
-		png, err := ioutil.ReadFile(filename)
-		if err == nil {
-			buffer = png
-			CacheStore(p.screenshotUrl, buffer)
-		}
+	png, err := ioutil.ReadFile(filename)
+	if err == nil {
+		buffer = png
 	}
 
 	if p.screenshotSize == "" {
@@ -128,33 +93,6 @@ func (p *Process) Handle() {
 		return
 	}
 
-	image := mogrify.NewImage()
-	defer image.Destroy()
-
-	err := image.OpenBlob(buffer)
-
-	if err != nil {
-		p.ServeError(err.Error())
-		return
-	}
-
-	resized, err := image.NewTransformation("", p.screenshotSize)
-	defer resized.Destroy()
-
-	if err != nil {
-		p.ServeError(err.Error())
-		return
-	}
-
-	blob, err := resized.Blob()
-
-	if err != nil {
-		p.ServeError(err.Error())
-		return
-	}
-
-	CacheStore(p.screenshotUrl+p.screenshotSize, blob)
-	p.ServePng(blob)
 }
 
 func Server(w http.ResponseWriter, r *http.Request) {
