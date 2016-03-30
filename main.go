@@ -40,12 +40,6 @@ func (p *Process) ServePng(b []byte) {
 	p.status = http.StatusOK
 }
 
-// Return true if the cache entry should be considered
-// fresh based on the command line parameters
-func fresh(c *cacheEntry) bool {
-	elapsed := time.Since(c.stat.ModTime()).Minutes()
-	return elapsed < float64(*cacheLength)*3
-}
 
 func (p *Process) ServeError(msg string) {
 	log.Println(msg)
